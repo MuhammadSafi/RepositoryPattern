@@ -13,10 +13,10 @@ namespace RepositoryPattern.DAL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class xml2018Entities : DbContext
+    public partial class EmployeeDBContext : DbContext
     {
-        public xml2018Entities()
-            : base("name=xml2018Entities")
+        public EmployeeDBContext()
+            : base("name=EmployeeDBContext")
         {
         }
     
