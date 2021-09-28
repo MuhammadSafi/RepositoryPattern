@@ -1,4 +1,6 @@
-﻿using RepositoryPattern.DAL;
+﻿
+using RepositoryPattern.DAL;
+using RepositoryPattern.Repositories.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;

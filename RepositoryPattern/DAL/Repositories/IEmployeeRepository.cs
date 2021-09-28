@@ -1,9 +1,10 @@
-﻿using System;
+﻿using RepositoryPattern.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace RepositoryPattern.DAL
+namespace RepositoryPattern.Repositories.DAL
 {
     public interface  IEmployeeRepository
     {
