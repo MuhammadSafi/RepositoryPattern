@@ -150,6 +150,9 @@
     </Compile>
     <Compile Include="DAL\Repositories\EmployeeRepository.cs" />
     <Compile Include="DAL\Repositories\IEmployeeRepository.cs" />
+    <Compile Include="DAL\Services\EmployeeService.cs" />
+    <Compile Include="DAL\Services\IEmployeeService.cs" />
+    <Compile Include="DTO\EmployeeDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
