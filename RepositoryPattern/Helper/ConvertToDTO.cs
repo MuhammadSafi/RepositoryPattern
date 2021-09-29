@@ -33,9 +33,9 @@ namespace RepositoryPattern.Helper
             return toRecord;
         }
 
-        public static IEnumerable<TOut> Convert<TIn,TOut>(List<TIn> fromRecordList) where TOut : new()
+        public static IEnumerable<TOut> Convert<TIn,TOut>(List<TOut> fromRecordList) where TIn : new()
         {
-            return fromRecordList.Count == 0 ? null : fromRecordList.Select(Convert<TOut, TIn>).ToList();
+            return fromRecordList.Count == 0 ? null : fromRecordList.Select(Convert<TIn,TOut>).ToList();
         }
     }
 }

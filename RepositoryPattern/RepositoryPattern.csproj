@@ -145,6 +145,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DbContext.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DAL\DTOBuilder\EmployeeDtoBuilder.cs" />
     <Compile Include="DAL\Employee.cs">
       <DependentUpon>DbContext.tt</DependentUpon>
     </Compile>

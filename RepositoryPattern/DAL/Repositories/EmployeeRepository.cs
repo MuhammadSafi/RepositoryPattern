@@ -1,4 +1,6 @@
 ﻿using RepositoryPattern.DAL;
+using RepositoryPattern.DAL.DTOBuilder;
+using RepositoryPattern.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -24,7 +26,12 @@ namespace RepositoryPattern.Repositories.DAL
 
         public IEnumerable<Employee> GetAll()
         {
-            return _context.Employees.ToList();
+            var lists= _context.Employees.ToList();
+
+
+            lists.OrderByDescending(p => p.EmployeeID)
+                           .Select(p => EmployeeDtoBuilder.Build(p));
+            return lists;
         }
 
         public Employee GetById(int EmployeeID)
