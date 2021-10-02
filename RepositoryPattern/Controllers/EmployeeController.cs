@@ -12,16 +12,13 @@ namespace RepositoryPattern.Controllers
 {
     public class EmployeeController : Controller
     {
-        private IEmployeeRepository _employeeRepository;
         private IEmployeeService _employeeService;
         public EmployeeController()
         {
-            _employeeRepository = new EmployeeRepository(new EmployeeDBContext());
-            _employeeService = new EmployeeService(_employeeRepository);
+           
         }
-        public EmployeeController(IEmployeeRepository employeeRepository, IEmployeeService employeeService)
+        public EmployeeController(IEmployeeService employeeService)
         {
-            _employeeRepository = employeeRepository;
             _employeeService = employeeService;
         }
         [HttpGet]
@@ -41,7 +38,7 @@ namespace RepositoryPattern.Controllers
             if (ModelState.IsValid)
             {
                 _employeeService.AddEmployee(model);
-                 return RedirectToAction("Index", "Employee");
+                return RedirectToAction("Index", "Employee");
             }
             return View();
         }

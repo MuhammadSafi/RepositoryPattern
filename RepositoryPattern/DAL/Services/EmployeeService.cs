@@ -11,6 +11,7 @@ namespace RepositoryPattern.DAL.Services
     {
         private IEmployeeRepository _employeeRepository;
 
+        public EmployeeService() { }
         public EmployeeService(IEmployeeRepository employeeRepository)
         {
             _employeeRepository = employeeRepository;
