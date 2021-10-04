@@ -19,7 +19,7 @@ namespace RepositoryPattern.Controllers
         }
         public EmployeeController(IEmployeeService employeeService)
         {
-            _employeeService = employeeService;
+           _employeeService = employeeService;
         }
         [HttpGet]
         public ActionResult Index()

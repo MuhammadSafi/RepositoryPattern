@@ -179,6 +179,8 @@
     </Compile>
     <Compile Include="DAL\Repositories\EmployeeRepository.cs" />
     <Compile Include="DAL\Repositories\IEmployeeRepository.cs" />
+    <Compile Include="DAL\Repositories\IRepository.cs" />
+    <Compile Include="DAL\Repositories\Repository.cs" />
     <Compile Include="DAL\Services\EmployeeService.cs" />
     <Compile Include="DAL\Services\IEmployeeService.cs" />
     <Compile Include="DTO\EmployeeDto.cs" />

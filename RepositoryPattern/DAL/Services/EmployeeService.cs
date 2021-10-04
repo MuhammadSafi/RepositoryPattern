@@ -9,17 +9,17 @@ namespace RepositoryPattern.DAL.Services
 {
     public class EmployeeService : IEmployeeService
     {
-        private IEmployeeRepository _employeeRepository;
+        private IEmployeeRepository _IEmployeeRepository;
 
         public EmployeeService() { }
-        public EmployeeService(IEmployeeRepository employeeRepository)
+        public EmployeeService(IEmployeeRepository IEmployeeRepository)
         {
-            _employeeRepository = employeeRepository;
+            _IEmployeeRepository = IEmployeeRepository;
         }
         public IEnumerable<Employee> GetAllEmployees()
         {
 
-            var model = _employeeRepository.GetAll();
+            var model = _IEmployeeRepository.GetAll();
             return model;
 
         }
@@ -27,36 +27,36 @@ namespace RepositoryPattern.DAL.Services
         public void AddEmployee(Employee model)
         {
 
-            _employeeRepository.Insert(model);
-            _employeeRepository.Save();
+            _IEmployeeRepository.Insert(model);
+            _IEmployeeRepository.Save();
         }
 
         public Employee EditEmployee(int EmployeeId)
         {
 
-            var model = _employeeRepository.GetById(EmployeeId);
+            var model = _IEmployeeRepository.GetById(EmployeeId);
             return model;
 
         }
 
         public void EditEmployee(Employee model)
         {
-            _employeeRepository.Update(model);
-            _employeeRepository.Save();
+            _IEmployeeRepository.Update(model);
+            _IEmployeeRepository.Save();
         }
 
         public Employee DeleteEmployee(int EmployeeId)
         {
 
-            var model = _employeeRepository.GetById(EmployeeId);
+            var model = _IEmployeeRepository.GetById(EmployeeId);
             return model;
         }
 
         public void Delete(int EmployeeId)
         {
 
-            _employeeRepository.Delete(EmployeeId);
-            _employeeRepository.Save();
+            _IEmployeeRepository.Delete(EmployeeId);
+            _IEmployeeRepository.Save();
         }
     }
 }

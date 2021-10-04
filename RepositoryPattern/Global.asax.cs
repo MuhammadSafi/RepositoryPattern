@@ -1,5 +1,7 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
+using RepositoryPattern.DAL;
+using RepositoryPattern.DAL.Repositories;
 using RepositoryPattern.DAL.Services;
 using RepositoryPattern.Repositories.DAL;
 using System;
@@ -24,7 +26,8 @@ namespace RepositoryPattern
 
             var builder = new ContainerBuilder();
             builder.RegisterType<EmployeeService>().As<IEmployeeService>();
-            builder.RegisterType<EmployeeRepository>().As<IEmployeeRepository>();
+            builder.RegisterType<EmployeeRepository>().As<Repository<IEmployeeRepository>>();
+           // builder.RegisterType<EmployeeRepository>().As<Repository<Employee>>();
 
 
 
